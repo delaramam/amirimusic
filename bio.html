@@ -16,24 +16,58 @@
     /* Force scrollbar always visible */
     .photo-strip .inner {
       overflow-x: scroll !important;
+      scrollbar-width: none; /* Firefox - hide native scrollbar */
+      -ms-overflow-style: none; /* IE/Edge - hide native scrollbar */
     }
     .photo-strip .inner::-webkit-scrollbar {
-      -webkit-appearance: none;
-      height: 12px;
-      display: block !important;
+      display: none !important; /* Chrome/Safari - hide native scrollbar */
     }
-    .photo-strip .inner::-webkit-scrollbar-track {
-      background: rgba(255,255,255,0.3);
-      border-radius: 6px;
+    
+    /* Scroll hint shadow on edges */
+    .photo-strip {
+      position: relative;
     }
-    .photo-strip .inner::-webkit-scrollbar-thumb {
-      background: #fff;
-      border-radius: 6px;
+    .photo-strip::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 40px;
+      background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
+      pointer-events: none;
     }
     
     /* Black and white photos */
     .photo-strip .photo-card img {
       filter: grayscale(100%);
+    }
+    
+    /* Custom scroll indicator */
+    .scroll-indicator {
+      display: none;
+      padding: 12px 15px;
+    }
+    .scroll-track {
+      height: 6px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 3px;
+      position: relative;
+    }
+    .scroll-thumb {
+      height: 100%;
+      width: 20%;
+      background: #fff;
+      border-radius: 3px;
+      position: absolute;
+      left: 0;
+      transition: left 0.1s ease-out;
+    }
+    
+    @media (max-width: 768px) {
+      .scroll-indicator {
+        display: block;
+      }
     }
   </style>
 </head>
@@ -109,7 +143,7 @@
   <!-- Photo collection: horizontal scroll strip -->
   <section class="photo-strip">
     <div class="container">
-      <div class="inner">
+      <div class="inner" id="photoScroll">
         <div class="photo-card"><img src="assets/bio/photo-01.jpg" alt=""/></div>
         <div class="photo-card"><img src="assets/bio/photo-02.jpg" alt=""/></div>
         <div class="photo-card"><img src="assets/bio/photo-03.jpg" alt=""/></div>
@@ -124,6 +158,12 @@
         <div class="photo-card"><img src="assets/bio/photo-12.jpg" alt=""/></div>
         <div class="photo-card"><img src="assets/bio/photo-13.jpg" alt=""/></div>
         <div class="photo-card"><img src="assets/bio/photo-14.jpg" alt=""/></div>
+      </div>
+      <!-- Custom scroll indicator for mobile -->
+      <div class="scroll-indicator">
+        <div class="scroll-track">
+          <div class="scroll-thumb" id="scrollThumb"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -157,5 +197,20 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script>
+    // Custom scroll indicator for photo strip
+    const photoScroll = document.getElementById('photoScroll');
+    const scrollThumb = document.getElementById('scrollThumb');
+    
+    if (photoScroll && scrollThumb) {
+      photoScroll.addEventListener('scroll', function() {
+        const scrollLeft = photoScroll.scrollLeft;
+        const scrollWidth = photoScroll.scrollWidth - photoScroll.clientWidth;
+        const scrollPercent = scrollLeft / scrollWidth;
+        const thumbMaxLeft = 80; // 100% - 20% thumb width
+        scrollThumb.style.left = (scrollPercent * thumbMaxLeft) + '%';
+      });
+    }
+  </script>
 </body>
 </html>
