@@ -1,0 +1,11 @@
+# Private files - don't push to GitHub
+.subscribers.json
+subscribers-export.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
