@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0b0b0c">
   <title>Events — Delaram Amiri</title>
-  <link rel="stylesheet" href="styles.css?v=12">
+  <link rel="stylesheet" href="styles.css?v=14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -25,20 +25,21 @@
     }
     .event-poster {
       position: relative;
-      width: 180px;
-      height: auto;
-      min-height: 180px;
+      width: 140px;
+      height: 200px;
       border-radius: 8px;
       overflow: hidden;
       background: #1a1a1a;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
     .event-poster img {
       width: 100%;
-      height: auto;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
     }
     .event-poster .event-date {
       position: absolute;
@@ -107,10 +108,21 @@
       .event-card {
         grid-template-columns: 1fr;
         gap: 1rem;
+        text-align: center;
       }
       .event-poster {
         width: 100%;
-        height: 200px;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+      }
+      .event-poster img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      .event-info {
+        text-align: left;
       }
     }
   </style>

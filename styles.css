@@ -89,14 +89,12 @@ p { font-size: 1rem; line-height: 1.8; color: #cfc9bf; }
   .nav-menu { display:none; }
   .hamburger { display:flex; }
   .hero-content, .statement-content, .concert-info, .bio-content { grid-template-columns:1fr; gap:2rem; }
-  .swirl-divider { margin-top: 2rem !important; }
   .hero { padding: 3rem 0; }
 }
 
 @media (max-width:480px) {
   .container { padding:0 15px; }
   h1 { font-size:2rem; }
-  .swirl-divider { margin-top: 1rem !important; }
 }
 
 /* Strong overrides to remove any remaining light backgrounds */
@@ -872,7 +870,7 @@ p {
   z-index: 2;
   width: 100%;
   max-width: 1100px;
-  padding: 6rem 20px calc(55vh + 6rem); /* increased gap below text so it clears the anchored image */
+  padding: 6rem 20px 2rem;
   margin: 0 auto;
   display: block;
   text-align: center;
@@ -1007,7 +1005,7 @@ p {
 
 @media (max-width: 480px) {
   .swirl-divider svg { width: 98%; height: 52px; }
-  .swirl-home { margin-top: 1rem; }
+  .swirl-home { margin-top: -8rem; }
 }
 
 
