@@ -980,7 +980,7 @@ p {
 
 /* Special swirl positioning for home page */
 .swirl-home {
-  margin-top: -40rem;
+  margin-top: -800rem;
 }
 
 .swirl-divider svg {
@@ -1002,7 +1002,7 @@ p {
 
 @media (max-width: 768px) {
   .swirl-divider svg { width: 94%; height: 64px; }
-  .swirl-home { margin-top: 2rem; }
+  .swirl-home { margin-top: -10rem; }
 }
 
 @media (max-width: 480px) {
