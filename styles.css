@@ -53,7 +53,7 @@ p { font-size: 1rem; line-height: 1.8; color: #cfc9bf; }
 .hero { margin-top:80px; padding:6rem 0; background: #000; }
 .hero-content { display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
 .hero-text h1 { color:#fff; font-size:3.6rem; }
-.hero-description { color:#070605; }
+.hero-description { color:#e6e5df; }
 .hero-image, .image-placeholder { background:#0b0b0c; border-radius:10px; display:flex; align-items:center; justify-content:center; color:#a9a29a; }
 
 /* Hero image styling */
@@ -89,11 +89,14 @@ p { font-size: 1rem; line-height: 1.8; color: #cfc9bf; }
   .nav-menu { display:none; }
   .hamburger { display:flex; }
   .hero-content, .statement-content, .concert-info, .bio-content { grid-template-columns:1fr; gap:2rem; }
+  .swirl-divider { margin-top: 2rem !important; }
+  .hero { padding: 3rem 0; }
 }
 
 @media (max-width:480px) {
   .container { padding:0 15px; }
   h1 { font-size:2rem; }
+  .swirl-divider { margin-top: 1rem !important; }
 }
 
 /* Strong overrides to remove any remaining light backgrounds */
@@ -440,9 +443,32 @@ p {
 
 .bio-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 8rem;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
   align-items: start;
+}
+
+.bio-content-reverse {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.bio-content-reverse .bio-image {
+  order: 2;
+}
+
+.bio-content-reverse .bio-text {
+  order: 1;
+}
+
+.tombak-section {
+  padding-top: 4rem;
+}
+
+.bio-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .bio-text {
@@ -1351,5 +1377,55 @@ p {
     
     .next-concert h3 {
         font-size: 1.3rem;
+    }
+    
+    /* Bio page mobile - override inline styles */
+    .bio-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    .bio-content[style*="grid-template-columns"] {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    .bio-image {
+        order: -1;
+        text-align: center;
+    }
+    
+    .bio-photo {
+        width: 100% !important;
+        max-width: 350px !important;
+        height: auto !important;
+        margin: 0 auto;
+    }
+    
+    .bio-text {
+        padding: 0 1rem;
+    }
+    
+    .bio-text h2 {
+        text-align: center;
+    }
+    
+    .bio-text p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    .bio-section {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Photo strip mobile */
+    .photo-strip .inner {
+        gap: 10px;
+    }
+    
+    .photo-strip .photo-card img {
+        height: 200px !important;
     }
 }
