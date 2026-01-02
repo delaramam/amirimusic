@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <title>Events — Delaram Amiri</title>
+  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body{background:#000 !important;color:#e6e5df !important;}
+    .main-header, .main-footer{background:transparent !important;}
+    
+    .events-list {
+      padding: 8rem 0 4rem 0;
+    }
+    .event-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .event-poster {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #1a1a1a;
+    }
+    .event-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .event-poster .event-date {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .event-date .month {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: #a09890;
+    }
+    .event-date .day {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #efe9dd;
+    }
+    .event-info h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
+      color: #efe9dd;
+    }
+    .event-info .time-venue {
+      color: #a09890;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .event-info .description {
+      color: #cfc6bb;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .event-info .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      background: transparent;
+      border: 1px solid #efe9dd;
+      color: #efe9dd;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-right: 1rem;
+      transition: all 0.3s ease;
+    }
+    .event-info .btn svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+    .event-info .btn:hover {
+      background: #efe9dd;
+      color: #000;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #efe9dd;
+    }
+    @media (max-width: 600px) {
+      .event-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .event-poster {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body style="background-color:#0b0b0c;color:#e6e5df;">
+  <header class="main-header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Delaram Amiri" class="logo-img">Delaram Amiri</a>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="bio.html" class="nav-link">Bio</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="faraz.html" class="nav-link">Faraz Ensemble</a>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="events-list">
+      <div class="container">
+        <h2 class="section-title">Future Events</h2>
+
+        <div class="event-card" style="justify-content: center; text-align: center; padding: 3rem 0;">
+          <div class="event-info" style="grid-column: 1 / -1;">
+            <p class="description" style="font-size: 1.2rem; color: #a09890;">To be announced — stay tuned!</p>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 4rem;">Past Events</h2>
+
+        <!-- Event 1 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/persian-early-music-2025.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">NOV</div>
+              <div class="day">16</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>A Meeting Place: Persian Early Music</h3>
+            <p class="time-venue">3:00 PM – 5:00 PM · Black and Tan Hall, 5608 Rainier Ave S, Seattle, WA</p>
+            <p class="description">Join us for Persian Night of Early Music, a contemplative evening exploring the beauty and depth of Persian classical tradition through intimate performances. Performers include Gus Denhard (oud) with Delaram Amiri (tombak), Parham Souri (setar) with Delaram (tombak), and the Faraz Ensemble.</p>
+            <a href="https://events.humanitix.com/a-meeting-place-persian-early-music" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/faraz-seattle.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">AUG</div>
+              <div class="day">16</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Persian Classical Melodies - Seattle</h3>
+            <p class="time-venue">7:30 PM – 9:00 PM · Good Shepherd Center, 4649 Sunnyside Ave N, Seattle, WA</p>
+            <p class="description">Immerse yourself in the rich cultural heritage of Iran as Faraz Ensemble presents a mesmerizing performance of classical Persian music. Featuring the soulful sounds of the Tar, the haunting melodies of the Ney, the rhythmic beats of the Tombak, and the deep resonance of the Cello.</p>
+            <a href="https://www.eventbrite.com/e/classical-persian-melodies-tickets-1420708520429?aff=oddtdtcreator" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/faraz-bellingham.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">JUL</div>
+              <div class="day">25</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Persian Classical Melodies - Bellingham</h3>
+            <p class="time-venue">7:30 PM – 9:00 PM · Honeymoon, 1053 N. State St, Bellingham, WA</p>
+            <p class="description">Immerse yourself in the rich cultural heritage of Iran as Faraz Ensemble presents a mesmerizing performance of classical Persian music. Featuring the soulful sounds of the Tar, the haunting melodies of the Ney, the rhythmic beats of the Tombak, and the deep resonance of the Cello.</p>
+            <a href="https://www.eventbrite.com/e/classical-persian-melodies-faraz-ensemble-tickets-1364544392009?aff=oddtdtcreator" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/folklife2025.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">MAY</div>
+              <div class="day">25</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Beyond Borders - 2025 Folklife Festival</h3>
+            <p class="time-venue">8:00 PM – 8:30 PM · Rotunda at Bagley Wright Theater, 155 Mercer St, Seattle, WA</p>
+            <p class="description">Presented by Early Music Seattle: Duo of Tombak and Oud with a broad audience. Join us for a music performance. The event is free and open to the public.</p>
+            <a href="https://earlymusicseattle.org/event/beyond-borders-delaram-amiri-and-gus-denhard/" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/sound-garden-2025.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">MAY</div>
+              <div class="day">17</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Sound Garden Series</h3>
+            <p class="time-venue">2:00 PM – 3:00 PM · Walters Cultural Arts Center, 527 E Main St, Hillsboro, OR</p>
+            <p class="description">Join Portland Youth Philharmonic's Chamber Orchestra Camerata for a captivating evening of music that bridges cultures and traditions. The program features Kamyar Mohajer's Lights Away, featuring Delaram Amiri on Tombak, Hossein Salahi on Santoor, and Bobak Salehi on Kamancheh.</p>
+            <a href="https://portlandyouthphil.org/events/events/copy-copy-copy-camerata-pyp-winter-concert/1203" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 6 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/sound-garden-2025.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">MAY</div>
+              <div class="day">14</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Sound Garden Series</h3>
+            <p class="time-venue">7:30 PM – 9:00 PM · Patricia Reser Center for the Arts, 12625 SW Crescent St, Beaverton, OR</p>
+            <p class="description">Join Portland Youth Philharmonic's Chamber Orchestra Camerata for a captivating evening of music that bridges cultures and traditions. The program features Kamyar Mohajer's Lights Away, featuring Delaram Amiri on Tombak, Hossein Salahi on Santoor, and Bobak Salehi on Kamancheh.</p>
+            <a href="https://portlandyouthphil.org/events/events/copy-copy-camerata-pyp-winter-concert/1202" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 7 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/nowruz-2025.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">MAR</div>
+              <div class="day">23</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Persian Classical Duo - Tombak and Setar</h3>
+            <p class="time-venue">1:00 PM – 2:15 PM & 3:30 PM – 4:45 PM · Seattle City Hall, 600 4th Ave, Seattle, WA</p>
+            <p class="description">Join us for a live performance of Persian classical music, featuring a 10-minute duet of Tombak and Setar as part of the Nowruz celebration. Admission is free, but seating in the concert hall is limited, so be sure to arrive early!</p>
+          </div>
+        </div>
+
+        <!-- Event 8 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/tombak-lute.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">JAN</div>
+              <div class="day">3</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>East Meets West: Duo of Tombak & Lute</h3>
+            <p class="time-venue">8:00 PM – 9:30 PM · Honeymoon, 1053 N. State St, Bellingham, WA</p>
+            <p class="description">Come join us for a mesmerizing evening of music Duo of Tombak & Lute. Immerse yourself in a captivating evening of Baroque music as the Duo of Tombak & Lute presents a mesmerizing blend of Eastern and Western musical traditions.</p>
+            <a href="https://tinyurl.com/duo-of-tombak-lute" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 9 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/horizon-2024.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">OCT</div>
+              <div class="day">20</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Horizon - Piano Recital with Percussion</h3>
+            <p class="time-venue">7:00 PM – 8:30 PM · Town Hall Seattle, 1119 8th Avenue Seattle, WA</p>
+            <p class="description">For two centuries the East and the West have been weaving a shared type of music. The attraction and the fascination they have with one another flourishes with beautiful sounds that transcends the pompousness of exoticism.</p>
+            <a href="https://www.eventbrite.com/e/layla-ramezan-piano-recital-in-town-hall-seattle-tickets-928904306787?aff=oddtdtcreator" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+        <!-- Event 10 -->
+        <div class="event-card">
+          <div class="event-date">
+            <div class="month">MAY</div>
+            <div class="day">25</div>
+          </div>
+          <div class="event-info">
+            <h3>Classical Persian Duo - 2024 Folklife Festival</h3>
+            <p class="time-venue">2:30 PM – 4:00 PM · Cornish Playhouse, 201 Mercer St, Seattle, WA</p>
+            <p class="description">2024 Folklife festival featuring the beauty of Persian music with a broad audience. Join us for a Persian classical music performance. The event is free and open to the public.</p>
+          </div>
+        </div>
+
+        <!-- Event 11 -->
+        <div class="event-card">
+          <div class="event-date">
+            <div class="month">MAR</div>
+            <div class="day">24</div>
+          </div>
+          <div class="event-info">
+            <h3>Persian Classical Duo</h3>
+            <p class="time-venue">1:30 PM & 3:45 PM · Seattle City Hall, 600 4th Ave, Seattle, WA</p>
+            <p class="description">You are invited to enjoy a live Persian Classic music performance. The event is free, but the concert hall has limited seats, so please come early.</p>
+          </div>
+        </div>
+
+        <!-- Event 12 -->
+        <div class="event-card">
+          <div class="event-poster">
+            <img src="assets/events/setar-tombak-duet-2024.webp" alt="Event poster">
+            <div class="event-date">
+              <div class="month">MAR</div>
+              <div class="day">2</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h3>Setar and Tombak Duet - Persian Classical Concert</h3>
+            <p class="time-venue">7:00 PM – 8:30 PM · Pardis Center, 1934 108th Ave NE, Bellevue, WA</p>
+            <p class="description">Join us for an evening of live performance: Setar and Tombak Duet - Persian Classical Concert.</p>
+            <a href="https://www.eventbrite.com/e/setar-and-tombak-duet-persian-classical-music-tickets-796539821047?aff=oddtdtcreator" class="btn" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4zM13 17h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V7h2v2z"/></svg>Tickets</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <h3>Upcoming Performances</h3>
+      <p>Sign up with your email address to receive updates.</p>
+      <form class="newsletter-form" action="https://formspree.io/f/xdakeraz" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/images/logo.png" alt="Delaram Amiri Logo">
+      </div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="events.html">Events</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="faraz.html">Faraz Ensemble</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

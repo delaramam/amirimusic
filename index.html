@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b0c">
     <title>Delaram Amiri - Persian Classical Music</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <style>body{background-color:#000 !important;color:#e6e5df !important;} .main-header, .hero, .newsletter, .main-footer{background:transparent !important;}</style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-color:#0b0b0c;color:#e6e5df;">
     <header class="main-header">
         <nav class="navbar">
-            <div class="nav-container">
-                <a href="#" class="logo">Delaram Amiri</a>
+                <div class="nav-container">
+                <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Delaram Amiri" class="logo-img">Delaram Amiri</a>
                 <div class="nav-menu">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#bio" class="nav-link">Bio</a>
-                    <a href="#events" class="nav-link">Events</a>
-                    <a href="#gallery" class="nav-link">Gallery</a>
-                    <a href="#faraz" class="nav-link">Faraz Ensemble</a>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="bio.html" class="nav-link">Bio</a>
+                    <a href="events.html" class="nav-link">Events</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="faraz.html" class="nav-link">Faraz Ensemble</a>
                 </div>
                 <div class="hamburger">
                     <span></span>
@@ -35,162 +37,57 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Persian Classical Music</h1>
-                    <p class="hero-description">
-                        Persian classical music is a timeless art form that reflects centuries of culture and spirituality. 
-                        At its heart is the radif, a collection of melodic patterns that inspire both improvisation and composition. 
-                        Its gentle rhythms and beautiful melodies create a connection between the performer and the audience.
-                    </p>
+                    <p class="hero-description">Persian classical music is a timeless art form that reflects centuries of culture and spirituality. At its heart is the radif, a collection of melodic patterns that inspire both improvisation and composition. Its gentle rhythms and beautiful melodies create a connection between the performer and the audience.</p>
                 </div>
                 <div class="hero-image">
-                    <div class="image-placeholder">
-                        <span>Featured Image</span>
-                    </div>
+                    <img src="assets/hero.jpg" alt="Hero image" class="hero-photo">
                 </div>
             </div>
         </section>
+        </section>
 
-        <!-- Artist Statement -->
-        <section class="artist-statement">
+        <!-- Decorative swirl divider between image and tombak statement -->
+        <div class="swirl-divider" aria-hidden="true">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" role="img">
+                <path d="M0,48 C150,120 350,0 600,48 C850,96 1050,16 1200,48" />
+            </svg>
+        </div>
+
+        <!-- Tombak statement (below hero image) -->
+        <section class="tombak-statement">
             <div class="container">
-                <div class="statement-content">
-                    <div class="statement-image">
-                        <div class="image-placeholder">
-                            <span>Artist Photo</span>
-                        </div>
-                    </div>
-                    <div class="statement-text">
-                        <p>
-                            As a tombak player, my goal is to honor this rich tradition while incorporating my personal touch. 
-                            I am inspired by the deep roots of Persian classical music and aim to push the boundaries of what the tombak can express. 
-                            Through solo performances and collaborations, I strive to showcase the tombak as a powerful instrument that connects 
-                            the timeless beauty of Persian music with modern interpretations. My hope is to inspire others to experience the 
-                            emotions and beauty that Persian classical music offers.
-                        </p>
-                    </div>
-                </div>
+                <p>As a tombak player, my goal is to honor this rich tradition while incorporating my personal touch. I am inspired by the deep roots of Persian classical music and aim to push the boundaries of what the tombak can express. Through solo performances and collaborations, I strive to showcase the tombak as a powerful instrument that connects the timeless beauty of Persian music with modern interpretations. My hope is to inspire others to experience the emotions and beauty that Persian classical music offers.</p>
             </div>
         </section>
 
-        <!-- Next Concert -->
-        <section id="events" class="next-concert">
-            <div class="container">
-                <h2>Next Concert</h2>
-                <div class="concert-card">
-                    <div class="concert-info">
-                        <div class="concert-time">
-                            <h3>3:00 PM, November 16th</h3>
-                            <p class="venue">Black and Tan Hall</p>
-                        </div>
-                        <div class="concert-details">
-                            <h4>A Meeting Place: Persian Early Music</h4>
-                            <p class="concert-description">
-                                Join us for Persian Night of Early Music, a contemplative evening exploring the beauty and depth 
-                                of Persian classical tradition through intimate performances. The program moves between meditative 
-                                oud improvisations, the refined nuances of the setar and radif, and an ensemble performance rooted 
-                                in Persian classical music.
-                            </p>
-                            <p>
-                                Performers include Gus Denhard (oud) with Delaram Amiri (tombak), offering a meditative journey 
-                                that bridges Persian and world-music traditions; Parham Souri (setar) with Delaram (tombak), 
-                                presenting an intimate reading of radif-based material; and the Faraz Ensemble — Ali Ghaemmaghami (tar), 
-                                Behrooz Alavi (ney), Adrian Golay (cello), and Delaram Amiri (tombak), whose cross-cultural arrangements 
-                                create a warm, resonant chamber sound.
-                            </p>
-                            <a href="#" class="btn-tickets">Get Tickets</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Newsletter Signup -->
+        <!-- Home keeps hero and a small newsletter only -->
         <section class="newsletter">
             <div class="container">
                 <h3>Upcoming Performances</h3>
                 <p>Sign up with your email address to receive updates.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" required>
+                <form class="newsletter-form" action="https://formspree.io/f/xdakeraz" method="POST">
+                    <input type="email" name="email" placeholder="Enter your email" required>
                     <button type="submit">Sign Up</button>
                 </form>
-            </div>
-        </section>
-
-        <!-- Bio Section -->
-        <section id="bio" class="bio-section">
-            <div class="container">
-                <h2>Biography</h2>
-                <div class="bio-content">
-                    <div class="bio-image">
-                        <div class="image-placeholder">
-                            <span>Bio Photo</span>
-                        </div>
-                    </div>
-                    <div class="bio-text">
-                        <p>
-                            Delaram Amiri is a passionate tombak player dedicated to preserving and evolving the rich tradition 
-                            of Persian classical music. With deep roots in the radif system and a commitment to authentic expression, 
-                            Delaram brings both technical mastery and emotional depth to every performance.
-                        </p>
-                        <p>
-                            Through collaborations with renowned musicians and solo performances, Delaram continues to explore 
-                            the boundaries of Persian percussion while honoring its centuries-old traditions.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery-section">
-            <div class="container">
-                <h2>Gallery</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <div class="image-placeholder">Performance 1</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="image-placeholder">Performance 2</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="image-placeholder">Performance 3</div>
-                    </div>
-                    <div class="gallery-item">
-                        <div class="image-placeholder">Performance 4</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Faraz Ensemble -->
-        <section id="faraz" class="ensemble-section">
-            <div class="container">
-                <h2>Faraz Ensemble</h2>
-                <div class="ensemble-content">
-                    <p>
-                        The Faraz Ensemble brings together traditional Persian instruments with contemporary arrangements, 
-                        creating a unique sound that honors the past while embracing the present. Led by accomplished musicians, 
-                        the ensemble features Ali Ghaemmaghami (tar), Behrooz Alavi (ney), Adrian Golay (cello), and Delaram Amiri (tombak).
-                    </p>
-                </div>
             </div>
         </section>
     </main>
 
     <footer class="main-footer">
         <div class="container">
+            <div class="footer-logo">
+                <img src="assets/images/logo.png" alt="Delaram Amiri Logo">
+            </div>
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#bio">Bio</a>
-                    <a href="#events">Events</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#faraz">Faraz Ensemble</a>
+                    <a href="index.html">Home</a>
+                    <a href="bio.html">Bio</a>
+                    <a href="events.html">Events</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="faraz.html">Faraz Ensemble</a>
                 </div>
                 <div class="footer-social">
-                    <a href="#" class="social-link">Facebook</a>
-                    <a href="#" class="social-link">Instagram</a>
-                    <a href="#" class="social-link">YouTube</a>
+                    <a href="https://www.instagram.com/farazensemble?igsh=cWdveXRyMjFkd2E4" class="social-link" target="_blank">Instagram</a>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -50,10 +50,10 @@ document.querySelector('.newsletter-form').addEventListener('submit', function(e
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.main-header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
+        header.style.background = 'rgba(10, 10, 11, 0.85)';
+        header.style.backdropFilter = 'blur(8px)';
     } else {
-        header.style.background = 'white';
+        header.style.background = 'transparent';
         header.style.backdropFilter = 'none';
     }
 });
@@ -100,11 +100,11 @@ style.textContent = `
             left: -100%;
             top: 70px;
             flex-direction: column;
-            background-color: white;
+            background-color: rgba(10,10,11,0.96);
             width: 100%;
             text-align: center;
             transition: 0.3s;
-            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
             padding: 2rem 0;
         }
         
@@ -116,6 +116,7 @@ style.textContent = `
             padding: 1rem 0;
             display: block;
             font-size: 1.2rem;
+            color: #e6dfd0;
         }
     }
 `;
