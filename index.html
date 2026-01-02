@@ -34,31 +34,87 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" style="padding-bottom: 0;">
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="hero-description">Persian classical music is a timeless art form that reflects centuries of culture and spirituality. At its heart is the radif, a collection of melodic patterns that inspire both improvisation and composition. Its gentle rhythms and beautiful melodies create a connection between the performer and the audience.</p>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/hero.jpg" alt="Hero image" class="hero-photo">
+                    <p class="hero-description" style="margin-top: 1.5rem; margin-bottom: 0;">As a tombak player, my goal is to honor this rich tradition while incorporating my personal touch. I am inspired by the deep roots of Persian classical music and aim to push the boundaries of what the tombak can express. Through solo performances and collaborations, I strive to showcase the tombak as a powerful instrument that connects the timeless beauty of Persian music with modern interpretations. My hope is to inspire others to experience the emotions and beauty that Persian classical music offers.</p>
                 </div>
             </div>
         </section>
-        </section>
+  </main>
+  
+  <!-- Decorative swirl divider above hero image -->
+  <div class="swirl-divider" aria-hidden="true" style="margin-top: -40rem;">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none" role="img">
+      <path d="M0,48 C150,120 350,0 600,48 C850,96 1050,16 1200,48" />
+    </svg>
+  </div>
 
-        <!-- Decorative swirl divider between image and tombak statement -->
-        <div class="swirl-divider" aria-hidden="true">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" role="img">
-                <path d="M0,48 C150,120 350,0 600,48 C850,96 1050,16 1200,48" />
-            </svg>
-        </div>
+  <!-- Hero Image Section -->
+  <section class="hero-image-section" style="padding: 0;">
+    <div class="container" style="display: flex; justify-content: center;">
+      <img src="assets/hero.jpg" alt="Hero image" class="hero-photo" style="max-width: 100%; border-radius: 8px;">
+    </div>
+  </section>
 
-        <!-- Tombak statement (below hero image) -->
-        <section class="tombak-statement">
-            <div class="container">
-                <p>As a tombak player, my goal is to honor this rich tradition while incorporating my personal touch. I am inspired by the deep roots of Persian classical music and aim to push the boundaries of what the tombak can express. Through solo performances and collaborations, I strive to showcase the tombak as a powerful instrument that connects the timeless beauty of Persian music with modern interpretations. My hope is to inspire others to experience the emotions and beauty that Persian classical music offers.</p>
+  <main>
+        <!-- Next Concert Section -->
+        <section class="next-concert" style="padding: 4rem 0; background: linear-gradient(180deg, transparent, rgba(201, 162, 39, 0.05));">
+            <div class="container" style="text-align: center;">
+                <h2 style="margin-bottom: 2rem;">Next Concert</h2>
+                
+                <!-- Upcoming Concert - will be hidden automatically after the date -->
+                <div id="upcoming-concert" style="display: none; max-width: 800px; margin: 0 auto;">
+                    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(201, 162, 39, 0.3); border-radius: 12px; padding: 2.5rem; margin-bottom: 2rem;">
+                        <h3 style="color: #c9a227; font-size: 1.5rem; margin-bottom: 1rem;">A Meeting Place: Persian Early Music</h3>
+                        <p style="color: #efe9dd; font-size: 1.2rem; margin-bottom: 0.5rem;"><strong>November 16th, 2026 · 3:00 PM</strong></p>
+                        <p style="color: #a09890; margin-bottom: 1.5rem;">Black and Tan Hall · Doors open at 3pm</p>
+                        
+                        <p style="color: #e6e5df; line-height: 1.8; margin-bottom: 1.5rem; text-align: left;">
+                            Join us for Persian Night of Early Music, a contemplative evening exploring the beauty and depth of Persian classical tradition through intimate performances. The program moves between meditative oud improvisations, the refined nuances of the setar and radif, and an ensemble performance rooted in Persian classical music.
+                        </p>
+                        <p style="color: #e6e5df; line-height: 1.8; margin-bottom: 1.5rem; text-align: left;">
+                            Performers include Gus Denhard (oud) with Delaram Amiri (tombak), offering a meditative journey that bridges Persian and world-music traditions; Parham Souri (setar) with Delaram (tombak), presenting an intimate reading of radif-based material; and the Faraz Ensemble — Ali Ghaemmaghami (tar), Behrooz Alavi (ney), Adrian Golay (cello), and Delaram Amiri (tombak), whose cross-cultural arrangements create a warm, resonant chamber sound.
+                        </p>
+                        <p style="color: #a09890; line-height: 1.8; margin-bottom: 2rem; text-align: left; font-style: italic;">
+                            This is the second in a series of concerts called A Meeting Place curated by Gus Denhard with support from a 4Culture Artists Support Grant.
+                        </p>
+                        
+                        <a href="#" class="btn" style="display: inline-block; padding: 0.8rem 2rem; background: #c9a227; color: #0b0b0c; text-decoration: none; border-radius: 6px; font-weight: 600;">Get Tickets</a>
+                    </div>
+                </div>
+                
+                <!-- TBD message - shown when no upcoming concert -->
+                <div id="no-concert" style="display: none;">
+                    <p style="color: #a09890; font-size: 1.2rem;">To be announced</p>
+                    <p style="color: #a09890;">Sign up for our newsletter below to be notified of upcoming performances.</p>
+                </div>
             </div>
         </section>
+
+        <script>
+            // Concert dates - add new concerts here
+            const concerts = [
+                { date: new Date('2026-11-16T15:00:00'), id: 'upcoming-concert' }
+            ];
+            
+            // Check if any concert is upcoming
+            const now = new Date();
+            let hasUpcoming = false;
+            
+            concerts.forEach(concert => {
+                if (concert.date > now) {
+                    document.getElementById(concert.id).style.display = 'block';
+                    hasUpcoming = true;
+                }
+            });
+            
+            // Show TBD if no upcoming concerts
+            if (!hasUpcoming) {
+                document.getElementById('no-concert').style.display = 'block';
+            }
+        </script>
 
         <!-- Home keeps hero and a small newsletter only -->
         <section class="newsletter">
