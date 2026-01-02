@@ -1,6 +1,7 @@
 # Private files - don't push to GitHub
 .subscribers.json
 subscribers-export.csv
+server.log
 
 # OS files
 .DS_Store
