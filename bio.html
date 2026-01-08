@@ -13,7 +13,7 @@
   <style>
     body{background:#000 !important;color:#e6e5df !important;}
     .main-header, .main-footer{background:transparent !important;}
-    
+
     /* Force scrollbar always visible */
     .photo-strip .inner {
       overflow-x: scroll !important;
@@ -23,7 +23,7 @@
     .photo-strip .inner::-webkit-scrollbar {
       display: none !important; /* Chrome/Safari - hide native scrollbar */
     }
-    
+
     /* Scroll hint shadow on edges */
     .photo-strip {
       position: relative;
@@ -38,15 +38,15 @@
       background: linear-gradient(to right, transparent, rgba(0,0,0,0.8));
       pointer-events: none;
     }
-    
+
     /* Black and white photos */
     .photo-strip .photo-card img {
       filter: grayscale(100%);
     }
-    
+
     /* Custom scroll indicator */
     .scroll-indicator {
-      display: none;
+      display: block;
       padding: 12px 15px;
     }
     .scroll-track {
@@ -64,7 +64,7 @@
       left: 0;
       transition: left 0.1s ease-out;
     }
-    
+
     @media (max-width: 768px) {
       .scroll-indicator {
         display: block;
@@ -133,7 +133,7 @@
       </div>
     </section>
   </main>
-  
+
   <!-- Decorative swirl divider above photo collection -->
   <div class="swirl-divider" aria-hidden="true">
     <svg viewBox="0 0 1200 120" preserveAspectRatio="none" role="img">
@@ -203,7 +203,7 @@
     // Custom scroll indicator for photo strip
     const photoScroll = document.getElementById('photoScroll');
     const scrollThumb = document.getElementById('scrollThumb');
-    
+
     if (photoScroll && scrollThumb) {
       photoScroll.addEventListener('scroll', function() {
         const scrollLeft = photoScroll.scrollLeft;
