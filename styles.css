@@ -74,9 +74,66 @@ p { font-size: 1rem; line-height: 1.8; color: #cfc9bf; }
 .concert-card { background: #0b0b0b; border-radius:12px; padding:2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03); }
 .btn-tickets { color:#e3c77a; border:1px solid rgba(227,199,122,0.12); padding:0.8rem 1.4rem; border-radius:6px; text-decoration:none; }
 
-.newsletter { background: #0b0b0b; color:#e6dfd0; text-align:center; padding:4rem 0; border-top:1px solid rgba(255,255,255,0.02); }
+.newsletter { background: #0b0b0b; color:#e6dfd0; text-align:center; padding:2rem 0; border-top:1px solid rgba(255,255,255,0.02); }
 .newsletter-form input { background: rgba(255,255,255,0.02); color:#efe7d9; border:1px solid rgba(255,255,255,0.04); padding:0.8rem; border-radius:6px; }
 .newsletter-form button { background:#080806; color:#070707; border:none; padding:0.8rem 1.2rem; border-radius:6px; }
+
+/* EmailOctopus form styling */
+.newsletter .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter .container > * {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.newsletter .container div,
+.newsletter .container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.newsletter input[type="email"],
+.newsletter input[type="text"] {
+  background: rgba(255,255,255,0.05) !important;
+  color: #efe7d9 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  padding: 0.8rem 1rem !important;
+  border-radius: 6px !important;
+  width: 100% !important;
+  max-width: 300px !important;
+  margin: 0 auto 0.5rem auto !important;
+  text-align: center;
+}
+.newsletter button,
+.newsletter input[type="submit"] {
+  background: #e3c77a !important;
+  color: #070707 !important;
+  border: none !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: 6px !important;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 0 auto !important;
+}
+.newsletter button:hover,
+.newsletter input[type="submit"]:hover {
+  background: #d4b86a !important;
+}
+/* Hide EmailOctopus branding */
+.newsletter a[href*="emailoctopus"],
+.newsletter a[href*="EmailOctopus"],
+.newsletter [class*="powered"],
+.newsletter small {
+  display: none !important;
+}
 
 .gallery-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1.5rem; }
 .gallery-item { background: linear-gradient(180deg,#0b0b0c,#151515); border-radius:10px; padding:1.2rem; color:#bfb6aa; }
