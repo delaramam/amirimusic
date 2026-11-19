@@ -156,9 +156,13 @@
     <section class="events-list">
       <div class="container">
         <h2 class="section-title">Future Events</h2>
+        <p id="no-future-events" class="description" style="display:none;color:#cfc6bb;">No upcoming events at the moment. Sign up below to receive updates.</p>
+
+        <!-- Future events: set data-end to the event's end time (ISO format with timezone offset). Once it passes, the card moves to Past Events automatically. -->
+        <div id="future-events">
 
         <!-- Event: Folklife Festival -->
-        <div class="event-card">
+        <div class="event-card" data-end="2026-05-24T21:00:00-07:00">
           <div class="event-poster">
             <img src="assets/events/folklife2026.webp" alt="Beyond Borders - Folklife 2026">
             <div class="event-date">
@@ -174,7 +178,11 @@
           </div>
         </div>
 
+        </div>
+
         <h2 class="section-title" style="margin-top: 4rem;">Past Events</h2>
+
+        <div id="past-events">
 
         <!-- Event: The Beat Goes On -->
         <div class="event-card">
@@ -388,6 +396,7 @@
           </div>
         </div>
 
+        </div>
       </div>
     </section>
   </main>
@@ -417,6 +426,24 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var future = document.getElementById('future-events');
+      var past = document.getElementById('past-events');
+      var now = Date.now();
+      var expired = Array.prototype.filter.call(future.querySelectorAll('.event-card[data-end]'), function (card) {
+        return new Date(card.dataset.end).getTime() < now;
+      });
+      // Newest first, placed above existing past events
+      expired.sort(function (a, b) { return new Date(b.dataset.end) - new Date(a.dataset.end); });
+      for (var i = expired.length - 1; i >= 0; i--) {
+        past.insertBefore(expired[i], past.firstChild);
+      }
+      if (!future.querySelector('.event-card')) {
+        document.getElementById('no-future-events').style.display = '';
+      }
+    })();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
